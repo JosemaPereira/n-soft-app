@@ -40,7 +40,7 @@
     "karma-coverage-istanbul-reporter": "2.0.5",
     "lerna": "3.15.0",
     "loadash": "^1.0.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
