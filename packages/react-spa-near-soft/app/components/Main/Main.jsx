@@ -1,6 +1,7 @@
 import React from 'react';
 import { injectIntl } from 'react-intl';
 import { mainMessages } from './messages';
+import { SearchContainer } from '../../containers/Search';
 
 export const Main = injectIntl(({ intl }) => (
   <>
@@ -12,5 +13,8 @@ export const Main = injectIntl(({ intl }) => (
         </div>
       </div>
     </header>
+    <div className="wrap">
+      <SearchContainer />
+    </div>
   </>
 ));
