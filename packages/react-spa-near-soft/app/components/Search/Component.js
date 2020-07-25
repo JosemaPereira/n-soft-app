@@ -26,15 +26,21 @@ const Search = ({
     <div className="issues-list">
       {_.map(content.items, item => (
         <div className="item" key={_.uniqueId()}>
-          <p>
-            {item.title} {item.state}
-          </p>
+          <div className="title">
+            {item.title} <span>State: {item.state}</span>
+          </div>
           {_.map(item.labels, label => (
-            <span key={_.uniqueId()}>{label.name}</span>
+            <div
+              className="label"
+              key={_.uniqueId()}
+              style={{ backgroundColor: `#${label.color}` }}
+            >
+              {label.name}
+            </div>
           ))}
-          <p>
+          <span className="info">
             #{item.number} opened at {item.created_at} by {item.user.login}
-          </p>
+          </span>
         </div>
       ))}
     </div>

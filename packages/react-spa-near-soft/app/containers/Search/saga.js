@@ -8,9 +8,13 @@ import * as searchSelectors from './selectors';
 import { getAllIssues } from '../../services';
 
 function* searchAllIssues() {
-  const data = yield call(getAllIssues);
+  try {
+    const data = yield call(getAllIssues);
 
-  yield put(setSearchContentHandlerReducer(data));
+    yield put(setSearchContentHandlerReducer(data));
+  } catch (ex) {
+    console.log(ex);
+  }
 }
 
 function* setInputHandler({ payload }) {
@@ -18,9 +22,13 @@ function* setInputHandler({ payload }) {
 }
 
 function* getSearchHandler() {
-  const inputValue = yield select(searchSelectors.inputValueSelector);
-  const data = yield call(getAllIssues,inputValue);
-  yield put(setSearchContentHandlerReducer(data));
+  try {
+    const inputValue = yield select(searchSelectors.inputValueSelector);
+    const data = yield call(getAllIssues, inputValue);
+    yield put(setSearchContentHandlerReducer(data));
+  } catch (ex) {
+    console.log(ex);
+  }
 }
 
 export function* searchSaga() {
