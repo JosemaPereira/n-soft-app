@@ -19,8 +19,8 @@ function* setInputHandler({ payload }) {
 
 function* getSearchHandler() {
   const inputValue = yield select(searchSelectors.inputValueSelector);
-
-  console.log(inputValue);
+  const data = yield call(getAllIssues,inputValue);
+  yield put(setSearchContentHandlerReducer(data));
 }
 
 export function* searchSaga() {

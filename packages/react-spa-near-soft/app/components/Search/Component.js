@@ -6,7 +6,7 @@ const Search = ({
   actions: { setInputValueHandlerSaga, getSearchHandlerSaga }
 }) => (
   <>
-    <label htmlFor="search" />
+    <label htmlFor="search">Filtrar issues</label>
     <input
       type="text"
       value={inputValue}
@@ -23,8 +23,8 @@ const Search = ({
       }}
     />
 
-    <div className="wrapp">
-      {_.map(content, item => (
+    <div className="issues-list">
+      {_.map(content.items, item => (
         <div className="item" key={_.uniqueId()}>
           <p>
             {item.title} {item.state}
