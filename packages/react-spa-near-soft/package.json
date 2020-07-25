@@ -24,11 +24,12 @@
     "lint:js": "yarn run lint:eslint . ",
     "pretest": "yarn run lint",
     "test": "cross-env NODE_ENV=test jest --coverage",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "watch:styles": "sass --watch ./app/styles/sass/index.scss ./app/styles/sass/styles.css"
   },
   "dependencies": {
     "@types/jasmine": "3.3.13",
-    "connected-react-router": "6.5.2",
+    "axios": "^0.19.2",
     "core-js": "3.1.4",
     "history": "4.9.0",
     "immer": "3.2.0",
@@ -38,6 +39,7 @@
     "karma-chrome-launcher": "3.0.0",
     "karma-coverage-istanbul-reporter": "2.0.5",
     "lerna": "3.15.0",
+    "loadash": "^1.0.0",
     "lodash": "4.17.15",
     "prop-types": "15.7.2",
     "react": "16.8.6",

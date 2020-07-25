@@ -5,6 +5,6 @@ const scope = 'components.Main';
 export const mainMessages = defineMessages({
   title: {
     id: `${scope}.title`,
-    defaultMessage: 'Hello world!!'
+    defaultMessage: 'Issues REACT'
   }
 });
