@@ -6,10 +6,22 @@ export const setInputValueHandlerReducer = payload => ({
   payload
 });
 
+export const setSearchContentHandlerReducer = payload => ({
+  type: searchConstants.SET_SEARCH_CONTENT_REDUCER,
+  payload
+});
+
 //Saga
 const setInputValueHandlerSaga = payload => ({
   type: searchConstants.SET_INPUT_VALUE_SAGA,
   payload
 });
 
-export const searchBindActions = { setInputValueHandlerSaga };
+const getSearchHandlerSaga = () => ({
+  type: searchConstants.GET_SEARCH_SAGA
+});
+
+export const searchBindActions = {
+  setInputValueHandlerSaga,
+  getSearchHandlerSaga
+};

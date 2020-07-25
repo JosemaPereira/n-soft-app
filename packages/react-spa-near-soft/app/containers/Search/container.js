@@ -10,7 +10,8 @@ import * as searchSelectors from './selectors';
 
 const mapStateToProps = state => ({
   search: searchSelectors.searchSelector(state),
-  inputValue: searchSelectors.inputValueSelector(state)
+  inputValue: searchSelectors.inputValueSelector(state),
+  content: searchSelectors.searchContentSelector(state)
 });
 
 const mapDispatchToProps = dispatch => ({
